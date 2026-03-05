@@ -1,0 +1,92 @@
+
+.footer {
+    background-image: linear-gradient(to right, #041C32, #04293A, #064663);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem;
+    color: #ECB365;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    /* Ensure the footer is above other content */
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer-item {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.footer-item:hover {
+    transform: scale(1.05);
+}
+
+.footer-logo {
+    width: 20px;
+    height: 20px;
+    margin-bottom: auto;
+}
+
+.footer-content {
+    text-align: center;
+    font-size: 14px;
+    color: #ECB365;
+    margin-top: 10px;
+}
+
+/* Additional styles to ensure the footer is always at the bottom */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Ensure the body takes full viewport height */
+}
+
+.content {
+    flex: 1;
+    /* Allow the content to take remaining space */
+    padding-top: 80px;
+    /* Adjust as necessary based on your navbar height */
+}
+
+.navbar {
+    background-image: linear-gradient(to right, #041C32, #04293A, #064663);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem;
+    color: #ECB365;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    /* Ensure the navbar is above other content */
+}

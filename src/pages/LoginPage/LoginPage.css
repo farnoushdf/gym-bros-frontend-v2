@@ -1,0 +1,112 @@
+.LoginPage {
+    max-width: 400px;
+    margin: auto;
+    padding: 120px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .LoginPage h2 {
+    color: #333;
+  }
+  
+  .LoginPage form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .LoginPage label {
+    text-align: left;
+    margin-bottom: 5px;
+    color: #555;
+  }
+  
+  .LoginPage input[type="email"],
+  .LoginPage input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+  }
+  
+  .LoginPage button[type="submit"] {
+    background-color: #ecb365;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .LoginPage button[type="submit"]:hover {
+    background-color: #d49e5a;
+  }
+  
+  .LoginPage .error-message {
+    color: #cc0000;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  .LoginPage p {
+    margin-top: 10px;
+  }
+  
+  .LoginPage .eye-icon {
+    cursor: pointer;
+    color: #007bff;
+    margin-top: -10px;
+    font-size: 14px;
+  }
+  
+  .LoginPage .confetti-icon {
+    cursor: pointer;
+    margin-top: 5px;
+    font-size: 24px;
+    color: #28a745;
+  }
+  
+  @media (max-width: 768px) {
+    .LoginPage {
+      padding: 10px;
+    }
+  
+    .LoginPage input[type="email"],
+    .LoginPage input[type="password"] {
+      padding: 8px;
+      font-size: 14px;
+    }
+  
+    .LoginPage button[type="submit"] {
+      padding: 8px 16px;
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .LoginPage {
+      max-width: 100%;
+      border-radius: 0;
+      border: none;
+    }
+  
+    .LoginPage form {
+      padding: 10px;
+    }
+  
+    .LoginPage input[type="email"],
+    .LoginPage input[type="password"] {
+      margin-bottom: 10px;
+    }
+  
+    .LoginPage .confetti-icon {
+      font-size: 20px;
+    }
+  }
+  

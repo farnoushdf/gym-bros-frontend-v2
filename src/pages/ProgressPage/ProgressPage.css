@@ -1,0 +1,146 @@
+/* Reset some default styles */
+body,
+h1,
+h2,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a basic style for the body */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(-45deg, #000204, #04293A, #064663, #ECB365);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    color: #ECB365;
+    line-height: 1.6;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Container for Progress Page */
+.progress {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    color: #ECB365;
+}
+
+/* Grid layout for progress items */
+.progress-display {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr)); /* Adjust the number based on your categories */
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    margin: 120px 75px 20px 75px;
+    background-color: #041c32;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #ECB365;
+    overflow: hidden; /* Ensures items don't overflow horizontally */
+}
+
+/* Styles for each progress item */
+.progress-item {
+    text-align: center;
+    padding: 20px;
+    background-color: #04293a;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.progress-display h2 {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #ECB365;
+}
+
+.progress-display p {
+    margin-top: 10px;
+    font-size: 1em;
+    color: #ECB365;
+}
+
+/* Message styles */
+h4 {
+    margin-top: 20px;
+    font-size: 1.4em;
+    color: #ECB365;
+}
+
+/* Button styles */
+.progress button {
+    background-color: #041c32;
+    color: #ECB365;
+    border: 2px solid #ECB365;
+    padding: 10px 20px;
+    margin: 20px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.progress button:hover {
+    background-color: #F2613F;
+}
+
+/* No target/progress message styles */
+.no-target-message,
+.no-progress-message {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.no-target-message p,
+.no-progress-message p {
+    font-size: 1.2em;
+    color: #ECB365;
+}
+
+.progress h4 {
+    margin-top: 50px; /* Adjust as needed */
+    font-size: 1.4em;
+    color: #ECB365;
+}
+
+/* Responsive design */
+@media (max-width: 900px) {
+    .progress-display {
+        grid-template-columns: repeat(3, minmax(0, 1fr)); /* Adjust based on screen size */
+    }
+}
+
+@media (max-width: 600px) {
+    .progress-display {
+        grid-template-columns: repeat(1, minmax(0, 1fr)); /* Display items in a single column */
+        margin: 60px 20px 120px 20px;
+        padding: 15px;
+    }
+
+    .progress-display h2 {
+        font-size: 1em;
+        margin-bottom: 10px;
+    }
+
+    .progress-display p {
+        font-size: 0.8em;
+    }
+}
+.progress-exceed-message {
+  color: red;
+  font-style: italic;
+  margin-top: 5px;
+}

@@ -1,0 +1,148 @@
+.user-routine-page {
+  max-width: 1000px;
+  margin: auto;
+  padding: 200px;
+  padding-top: 100px;
+  background-color: #f0f0f0;
+}
+
+.page-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.calendar-and-entries {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.calendar-container {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.entries-container {
+  flex: 1;
+}
+
+.routine-links {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: #ecb365;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-right: 10px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #d49e5a;
+}
+
+/* Specific button styles */
+.btn-add-meal {
+  background-color: #55a630; /* Green */
+}
+
+.btn-add-routine {
+  background-color: #4a90e2; /* Blue */
+}
+
+.btn-edit-routine {
+  background-color: #ed823f; /* Orange */
+}
+
+.btn-edit-meal {
+  background-color: #8a5be8; /* Purple */
+}
+
+.user-entries {
+  margin-top: 20px;
+}
+
+.entries-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.entries {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.entries-section {
+  flex: 1;
+}
+
+.entries-section h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.entries-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.entries-section ul li {
+  margin-bottom: 10px;
+}
+
+.btn-edit,
+.btn-delete {
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+.link {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 16px;
+  color: #007bff;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .calendar-and-entries {
+    flex-direction: column;
+  }
+
+  .entries-container {
+    margin-top: 20px;
+  }
+
+  .routine-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .entries {
+    flex-direction: column;
+  }
+
+  .entries-section {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+
+

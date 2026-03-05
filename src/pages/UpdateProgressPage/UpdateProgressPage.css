@@ -1,0 +1,75 @@
+/* UpdateProgressPage.css */
+
+.update-progress-page {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.update-progress-page h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.update-progress-page form {
+  display: grid;
+  gap: 20px;
+}
+
+.update-progress-page .mb-3 {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 10px;
+  align-items: center;
+}
+
+.update-progress-page .mb-3 input {
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.update-progress-page .mb-3 .input-group-text {
+  color: black;
+  border: none;
+}
+
+.update-progress-page .mb-3 .form-control {
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+}
+
+.update-progress-page .mb-3 button {
+  background-color: #04293a;
+  color: #ecb365;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.update-progress-page .mb-3 button:hover {
+  background-color: #ecb365;
+  color: #04293a;
+}
+
+@media screen and (max-width: 768px) {
+  .update-progress-page .mb-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .update-progress-page .mb-3 .input-group-text,
+  .update-progress-page .mb-3 .form-control {
+    width: 90%;
+  }
+
+  .update-progress-page .mb-3 button {
+    width: 90%;
+  }
+}

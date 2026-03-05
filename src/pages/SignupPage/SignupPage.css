@@ -1,0 +1,118 @@
+.SignupPage {
+    max-width: 400px;
+    margin: auto;
+    padding: 120px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .SignupPage h2 {
+    color: #333;
+  }
+  
+  .SignupPage form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .SignupPage label {
+    text-align: left;
+    margin-bottom: 5px;
+    color: #555;
+  }
+  
+  .SignupPage input[type="text"],
+  .SignupPage input[type="email"],
+  .SignupPage input[type="password"],
+  .SignupPage input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+  }
+  
+  .SignupPage button[type="submit"] {
+    background-color: #ecb365;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .SignupPage button[type="submit"]:hover {
+    background-color: #d49e5a;
+  }
+  
+  .SignupPage .error-message {
+    color: #cc0000;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  .SignupPage p {
+    margin-top: 10px;
+  }
+  
+  .SignupPage .reveal-password {
+    cursor: pointer;
+    color: #007bff;
+    margin-top: -10px;
+    font-size: 14px;
+  }
+  
+  .SignupPage .confetti-icon {
+    cursor: pointer;
+    margin-top: 5px;
+    font-size: 24px;
+    color: #28a745;
+  }
+  
+  @media (max-width: 768px) {
+    .SignupPage {
+      padding: 10px;
+    }
+  
+    .SignupPage input[type="text"],
+    .SignupPage input[type="email"],
+    .SignupPage input[type="password"],
+    .SignupPage input[type="file"] {
+      padding: 8px;
+      font-size: 14px;
+    }
+  
+    .SignupPage button[type="submit"] {
+      padding: 8px 16px;
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .SignupPage {
+      max-width: 100%;
+      border-radius: 0;
+      border: none;
+    }
+  
+    .SignupPage form {
+      padding: 10px;
+    }
+  
+    .SignupPage input[type="text"],
+    .SignupPage input[type="email"],
+    .SignupPage input[type="password"],
+    .SignupPage input[type="file"] {
+      margin-bottom: 10px;
+    }
+  
+    .SignupPage .confetti-icon {
+      font-size: 20px;
+    }
+  }
+  

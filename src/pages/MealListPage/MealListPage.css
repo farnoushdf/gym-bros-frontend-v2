@@ -1,0 +1,75 @@
+.meal-list-container {
+  margin: 70px 50px 200px 50px;
+}
+
+h1 {
+  text-align: center;
+}
+
+
+.meal-list-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+  color: #a79f9f;
+}
+
+.meal-list-page h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.meal-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.meal-item {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.meal-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.meal-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.meal-item h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 900px) {
+  .meal-list {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .meal-list {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  .meal-list-page {
+    padding: 50px 10px;
+  }
+
+  .meal-item h2 {
+    font-size: 1.5rem;
+  }
+}

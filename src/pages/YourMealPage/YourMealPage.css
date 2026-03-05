@@ -1,0 +1,68 @@
+.meal-page {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 70px;
+    color: #041C32;
+    padding-bottom: 300px;
+  }
+
+  footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: #041C32;
+    color: #ECB365;
+    text-align: center;
+    padding: 10px;
+    margin-top: 50px;
+  }
+
+  
+  .page-title {
+    text-align: center;
+    color: #c9c4be;
+    margin-bottom: 20px;
+  }
+  
+  .meal-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .meal-card {
+    background-color: #f4f4f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 10px;
+    width: 300px;
+    text-align: center;
+  }
+  
+  .meal-card h2 {
+    color: #ECB365;
+    margin-bottom: 10px;
+  }
+  
+  .meal-card p {
+    margin: 5px 0;
+  }
+  
+  .meal-link {
+    display: block;
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #ECB365;
+    color: #041C32;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .meal-link:hover {
+    background-color: #041C32;
+    color: #ECB365;
+  }
+  
