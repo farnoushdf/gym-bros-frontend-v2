@@ -101,7 +101,7 @@ const calculatePercentage = (category) => {
       <h4>You can set your target and progress here to check your progress</h4>
       <div className="progress-display">
         {categories.map((category) => (
-          <div key={category}>
+          <div key={category} className="progress-item">
             <h2>{category}</h2>
             <CircularProgressbar
               value={calculatePercentage(category)}

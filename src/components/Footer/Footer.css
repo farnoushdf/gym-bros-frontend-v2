@@ -74,6 +74,7 @@ body {
     /* Allow the content to take remaining space */
     padding-top: 80px;
     /* Adjust as necessary based on your navbar height */
+    padding-bottom: 120px;
 }
 
 .navbar {
@@ -89,4 +90,25 @@ body {
     left: 0;
     z-index: 1000;
     /* Ensure the navbar is above other content */
+}
+
+
+@media (max-width: 600px) {
+  .footer-links {
+    width: 100%;
+    justify-content: space-around;
+    gap: 0;
+  }
+
+  .footer-item {
+    width: 55px;
+    height: 55px;
+    padding: 5px;
+    font-size: 11px;
+  }
+
+  .footer-logo {
+    width: 18px;
+    height: 18px;
+  }
 }

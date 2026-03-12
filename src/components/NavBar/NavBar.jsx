@@ -4,13 +4,15 @@ import { AuthContext } from '../../context/auth.context';
 import logo from "../../assets/gym-icon.png";
 import "./Navbar.css";
 
+import { useLocation } from "react-router-dom";
+
+
+
 const Navbar = () => {
   const { handleLogout, currentUser, alertMessage } = useContext(AuthContext);
-  const isLandingPage = window.location.pathname === '/';
-
-  //  const firstLetter = currentUser
-  //    ? currentUser.username.charAt(0).toUpperCase()
-  //    : "";
+  
+const location = useLocation();
+const isLandingPage = location.pathname === "/";
 
   return (
     !isLandingPage && (
