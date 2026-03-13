@@ -1,5 +1,5 @@
 
-import React, { useState, useContext, useEffect } from "react";
+import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import "./SetTargetPage.css";
 import { Form, InputGroup, Button, Alert } from "react-bootstrap";
@@ -43,7 +43,11 @@ const SetTargetPage = () => {
     e.preventDefault();
 
     for (const key in formState) {
-      if (formState[key] > limits[key]) {
+        if (formState[key] === "") {
+          setMessage(`Please enter a value for ${key}`);
+          return;
+        }
+      if (Number(formState[key]) > limits[key]) {
         setMessage(
           `The value for ${key} exceeds the limit of ${limits[key]} ${units[key]}.`
         );
@@ -52,8 +56,18 @@ const SetTargetPage = () => {
     }
 
     try {
+      if (!currentUser) {
+        setMessage("You must be logged in to set targets.");
+        return;
+      }
+      console.log("Sending targets:", formState);
+      console.log("API URL:", API_URL);
       const response = await axios.post(`${API_URL}/progress/create-progress`, {
-        ...formState,
+        water: Number(formState.water),
+        weight: Number(formState.weight),
+        workout: Number(formState.workout),
+        sleep: Number(formState.sleep),
+        walk: Number(formState.walk),
         userId: currentUser._id,
       });
       setFormState(response.data);
@@ -64,15 +78,19 @@ const SetTargetPage = () => {
       console.error("Error posting targets:", error);
       setMessage("Error posting targets.");
     }
+
+    console.log("Submitting targets:", formState);
   };
 
   
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormState((prevFormState) => ({
-      ...prevFormState,
+
+    setFormState((prev) => ({
+      ...prev,
       [name]: value,
     }));
+
     setMessage("");
   };
 

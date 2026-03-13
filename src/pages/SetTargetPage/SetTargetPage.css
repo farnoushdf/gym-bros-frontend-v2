@@ -1,77 +1,81 @@
-
-
 .set-target-page {
-  max-width: 600px;
-  margin: 60px auto;
-  padding: 20px;
-  background-color: #f0f0f0;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 420px;
+  margin: 110px auto 120px auto;
+  padding: 30px;
+
+  background: #041c32;
+  border-radius: 12px;
+
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  color: #ECB365;
 }
+
+/* TITLE */
 
 .set-target-page h1 {
-  font-size: 2rem;
+  margin-bottom: 30px;
   text-align: center;
-  margin-bottom: 20px;
-  color: #333;
 }
+
+/* FORM */
 
 .set-target-page form {
-  display: grid;
-  gap: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
-.set-target-page .mb-3 {
+/* INPUT GROUP */
+
+.input-group {
   display: grid;
-  grid-template-columns: auto 1fr auto;
-  gap: 10px;
+  grid-template-columns: 90px 1fr 70px;
   align-items: center;
 }
 
-.set-target-page .mb-3 input {
+/* LABEL */
+
+.input-group-text {
+  background: #041c32;
+  border: none;
+  color: #ECB365;
+  justify-content: center;
+}
+
+/* INPUT */
+
+.form-control {
+  background: #04293a;
+  border: 1px solid #064663;
+  color: #ECB365;
+  border-radius: 6px;
+}
+
+/* BUTTON */
+
+.set-target-page button {
+  width: 200px;
+  margin: 25px auto 0;
+
+  background: transparent;
+  border: 2px solid #ECB365;
+  color: #ECB365;
+
   padding: 10px;
-  font-size: 1rem;
+  border-radius: 8px;
+
+  font-weight: bold;
+  transition: all 0.3s ease;
 }
 
-.set-target-page .mb-3 .input-group-text {
- 
-  color: black;
-  border: none;
-}
-
-.set-target-page .mb-3 .form-control {
-  border: 1px solid #ced4da;
-  border-radius: 5px;
-}
-
-.set-target-page .mb-3 button {
-  background-color: #04293a;
-  color: #ecb365;
-  border: none;
-  padding: 10px 20px;
-  font-size: 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.set-target-page .mb-3 button:hover {
-  background-color: #ecb365;
-  color: #04293a;
-}
-
-
-@media screen and (max-width: 768px) {
-  .set-target-page .mb-3 {
-    grid-template-columns: 1fr;
-  }
-
-  .set-target-page .mb-3 .input-group-text,
-  .set-target-page .mb-3 .form-control {
-    width: 90%;
-  }
-
-  .set-target-page .mb-3 button {
-    width: 90%;
-  }
+.set-target-page button:hover {
+  background: #F2613F;
+  border-color: #F2613F;
+  color: white;
 }
