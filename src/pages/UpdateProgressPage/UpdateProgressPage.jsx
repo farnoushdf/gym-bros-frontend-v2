@@ -49,10 +49,6 @@ const UpdateProgressPage = () => {
     }
 
     try {
-      if(!formState.weight) {
-        setMessage("Weight is required.");
-        return;
-      }
       const response = await axios.post(
         `${API_URL}/updateProgress/create-progress`,
         {

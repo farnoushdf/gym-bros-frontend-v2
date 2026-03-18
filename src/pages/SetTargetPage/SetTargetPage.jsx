@@ -41,10 +41,10 @@ const SetTargetPage = () => {
   
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    console.log("Form Data:", formState);
     for (const key in formState) {
-        if (formState[key] === "") {
-          setMessage(`Please enter a value for ${key}`);
+        if (!formState.weight) {
+          setMessage("Weight is required.");
           return;
         }
       if (Number(formState[key]) > limits[key]) {
@@ -63,16 +63,17 @@ const SetTargetPage = () => {
       console.log("Sending targets:", formState);
       console.log("API URL:", API_URL);
       const response = await axios.post(`${API_URL}/progress/create-progress`, {
-        water: Number(formState.water),
+        water: Number(formState.water) || 0,
         weight: Number(formState.weight),
-        workout: Number(formState.workout),
-        sleep: Number(formState.sleep),
-        walk: Number(formState.walk),
+        workout: Number(formState.workout) || 0,
+        sleep: Number(formState.sleep) || 0,
+        walk: Number(formState.walk) || 0,
         userId: currentUser._id,
       });
       setFormState(response.data);
       setMessage("Targets set successfully!");
       console.log("Post response:", response.data);
+      
       navigate("/update-progress"); 
     } catch (error) {
       console.error("Error posting targets:", error);
