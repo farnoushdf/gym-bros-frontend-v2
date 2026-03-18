@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { Form, InputGroup, Button, Alert } from "react-bootstrap";
@@ -49,10 +49,18 @@ const UpdateProgressPage = () => {
     }
 
     try {
+      if(!formState.weight) {
+        setMessage("Weight is required.");
+        return;
+      }
       const response = await axios.post(
         `${API_URL}/updateProgress/create-progress`,
         {
-          ...formState,
+          water: Number(formState.water) || 0,
+          weight: Number(formState.weight),
+          workout: Number(formState.workout) || 0,
+          sleep: Number(formState.sleep) || 0,
+          walk: Number(formState.walk) || 0,
           userId: currentUser._id,
         }
       );

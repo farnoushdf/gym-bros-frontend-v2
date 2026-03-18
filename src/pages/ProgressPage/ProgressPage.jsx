@@ -1,5 +1,3 @@
-
-
 import React, { useEffect, useState, useContext } from "react";
 import "./ProgressPage.css";
 import { Link } from "react-router-dom";
