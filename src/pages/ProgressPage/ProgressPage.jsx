@@ -34,6 +34,7 @@ const ProgressPage = () => {
         );
         if (data.length > 0) {
           setTargets(data[data.length - 1]);
+          console.log("Targets data:", data);
         }
       } catch (error) {
         console.log("Error fetching targets data:", error);
@@ -47,6 +48,7 @@ const ProgressPage = () => {
         );
         if (data.length > 0) {
           setProgress(data[data.length - 1]);
+          console.log("Progress data:", data);
         }
       } catch (error) {
         console.log("Error fetching progress data:", error);
