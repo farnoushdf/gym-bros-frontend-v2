@@ -69,6 +69,7 @@ const SetTargetPage = () => {
         sleep: Number(formState.sleep) || 0,
         walk: Number(formState.walk) || 0,
         userId: currentUser._id,
+        type: "target",
       });
       setFormState(response.data);
       setMessage("Targets set successfully!");

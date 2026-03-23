@@ -58,6 +58,7 @@ const UpdateProgressPage = () => {
           sleep: Number(formState.sleep) || 0,
           walk: Number(formState.walk) || 0,
           userId: currentUser._id,
+          type: "progress",
         }
       );
       setFormState(response.data);

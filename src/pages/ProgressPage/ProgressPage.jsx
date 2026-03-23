@@ -30,11 +30,11 @@ const ProgressPage = () => {
     const fetchTargets = async () => {
       try {
         const { data } = await axios.get(
-          `${API_URL}/progress/user-progress/${currentUser._id}`
+          `${API_URL}/progress/targets/${currentUser._id}`
         );
         if (data.length > 0) {
           setTargets(data[data.length - 1]);
-          console.log("Targets data:", data);
+          console.log("Targets data:", data); 
         }
       } catch (error) {
         console.log("Error fetching targets data:", error);
@@ -44,7 +44,7 @@ const ProgressPage = () => {
     const fetchProgress = async () => {
       try {
         const { data } = await axios.get(
-          `${API_URL}/updateProgress/user-progress/${currentUser._id}`
+          `${API_URL}/updateProgress/progress/${currentUser._id}`
         );
         if (data.length > 0) {
           setProgress(data[data.length - 1]);
