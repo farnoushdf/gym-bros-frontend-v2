@@ -62,7 +62,7 @@ const SetTargetPage = () => {
       }
       console.log("Sending targets:", formState);
       console.log("API URL:", API_URL);
-      const response = await axios.post(`${API_URL}/progress/create-progress`, {
+      const response = await axios.post(`${API_URL}/progress/create`, {
         water: Number(formState.water) || 0,
         weight: Number(formState.weight),
         workout: Number(formState.workout) || 0,

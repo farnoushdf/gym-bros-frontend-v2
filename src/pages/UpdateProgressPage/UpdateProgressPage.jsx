@@ -50,7 +50,7 @@ const UpdateProgressPage = () => {
 
     try {
       const response = await axios.post(
-        `${API_URL}/updateProgress/create-progress`,
+        `${API_URL}/progress/create`,
         {
           water: Number(formState.water) || 0,
           weight: Number(formState.weight),

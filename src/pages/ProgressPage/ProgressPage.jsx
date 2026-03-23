@@ -43,12 +43,12 @@ const ProgressPage = () => {
 
     const fetchProgress = async () => {
       try {
-        const { data } = await axios.get(
-          `${API_URL}/updateProgress/progress/${currentUser._id}`
+        const { data : progressData } = await axios.get(
+          `${API_URL}/progress/progress/${currentUser._id}`
         );
-        if (data.length > 0) {
-          setProgress(data[data.length - 1]);
-          console.log("Progress data:", data);
+        if (progressData.length > 0) {
+          setProgress(progressData[progressData.length - 1]);
+          console.log("Progress data:", progressData);
         }
       } catch (error) {
         console.log("Error fetching progress data:", error);
