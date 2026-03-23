@@ -43,11 +43,11 @@ const SetTargetPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log("Form Data:", formState);
+     if (!formState.weight) {
+       setMessage("Weight is required.");
+       return;
+     }
     for (const key in formState) {
-        if (!formState.weight) {
-          setMessage("Weight is required.");
-          return;
-        }
       if (Number(formState[key]) > limits[key]) {
         setMessage(
           `The value for ${key} exceeds the limit of ${limits[key]} ${units[key]}.`
@@ -78,7 +78,7 @@ const SetTargetPage = () => {
       
       navigate("/update-progress"); 
     } catch (error) {
-      console.error("Error posting targets:", error);
+       console.error("ERROR:", error.response?.data || error.message);
       setMessage("Error posting targets.");
     }
 
