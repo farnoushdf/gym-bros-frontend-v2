@@ -6,7 +6,8 @@ import { Form, InputGroup, Button, Alert } from "react-bootstrap";
 import axios from "axios";
 import { AuthContext } from "../../context/auth.context";
 
-const API_URL = import.meta.env.VITE_API_URL;
+// const API_URL = import.meta.env.VITE_API_URL;
+const API_URL = "https://gym-bros-backend-v2.onrender.com";
 
 const SetTargetPage = () => {
   const navigate = useNavigate();
