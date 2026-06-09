@@ -101,7 +101,7 @@ const SetTargetPage = () => {
     <div className="set-target-page">
       <h1>Set Your Targets</h1>
       {message && <Alert variant="info">{message}</Alert>}
-      <Form>
+      <Form onSubmit={handleSubmit}>
         {Object.keys(formState).map((key) => (
           <InputGroup className="mb-3" key={key}>
             <InputGroup.Text>
@@ -117,7 +117,7 @@ const SetTargetPage = () => {
             <InputGroup.Text>{units[key]}</InputGroup.Text>
           </InputGroup>
         ))}
-        <Button type="submit" onClick={(handleSubmit) => console.log("Submit button clicked")}>
+        <Button type="submit">
           Set Targets
         </Button>
       </Form>

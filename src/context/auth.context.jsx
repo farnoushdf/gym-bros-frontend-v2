@@ -1,7 +1,7 @@
 import axios from "axios";
 import { createContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-const API_URL = import.meta.env.VITE_API_URL;
+const API_URL = import.meta.env.VITE_API_URL || "https://gym-bros-backend-v2.onrender.com";
 
 
 const AuthContext = createContext();
@@ -17,11 +17,19 @@ const AuthContextWrapper = ({ children }) => {
     localStorage.setItem("authToken", token);
   };
 
-  const authenticateUser = async () => {
-    const tokenFromLocalStorage = localStorage.getItem("authToken");
+  const authenticateUser = async (token) => {
+    const tokenFromLocalStorage = token || localStorage.getItem("authToken");
+
+    if (!tokenFromLocalStorage) {
+      setCurrentUser(null);
+      setIsLoading(false);
+      setIsLoggedIn(false);
+      return;
+    }
+
     try {
       const { data } = await axios.get(`${API_URL}/auth/verify`, {
-        headers: { authorization: `Bearer ${tokenFromLocalStorage}` },
+        headers: { Authorization: `Bearer ${tokenFromLocalStorage}` },
       });
       setCurrentUser(data.user);
       setIsLoading(false);

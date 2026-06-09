@@ -6,7 +6,7 @@ import '../../components/Modal/Modal.css';
 import './HomePage.css';
 import fitnessImage from "../../assets/fitness-image.png";
 import { AuthContext } from '../../context/auth.context';
-const API_URL = import.meta.env.VITE_API_URL;
+const API_URL = import.meta.env.VITE_API_URL || "https://gym-bros-backend-v2.onrender.com";
 
 const HomePage = () => {
   const [showSignupModal, setShowSignupModal] = useState(false);
@@ -60,7 +60,7 @@ const HomePage = () => {
       .then(({ data }) => {
         console.log("response from the login", data);
         storedToken(data.authToken);
-        return authenticateUser();
+        return authenticateUser(data.authToken);
       })
       .then(() => {
         console.log("Login successful");

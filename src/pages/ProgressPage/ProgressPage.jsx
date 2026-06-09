@@ -28,6 +28,9 @@ const ProgressPage = () => {
   });
 
   useEffect(() => {
+    if (!currentUser) {
+      return;
+    }
     const fetchTargets = async () => {
       try {
         const { data } = await axios.get(
